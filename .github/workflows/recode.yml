@@ -40,8 +40,8 @@ jobs:
           import glob
 
           
-          openai.api_key = os.getenv("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")
-          export OPENAI_API_KEY=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
+          openai.api_key = os.getenv("---REDACTED! Please use Github's Secrets for API Keys, it's much more secure!---") # If you'd like, I can help you configure this to use Github Secrets properly so you won't have to embed (and leak) the API key.
+          export OPENAI_API_KEY=---REDACTED! Please use Github's Secrets for API Keys, it's much more secure!---
           def recode_file(file_path, prompt):
               with open(file_path, 'r') as file:
                   content = file.read()
