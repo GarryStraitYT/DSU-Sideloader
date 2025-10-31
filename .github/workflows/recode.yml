@@ -40,8 +40,8 @@ jobs:
           import glob
 
           
-          openai.api_key = os.getenv("---REDACTED! Please use Github's Secrets for API Keys, it's much more secure!---") # If you'd like, I can help you configure this to use Github Secrets properly so you won't have to embed (and leak) the API key.
-          export OPENAI_API_KEY=---REDACTED! Please use Github's Secrets for API Keys, it's much more secure!---
+          # OPENAI_API_KEY is already injected via GitHub Secrets (see line 35)
+          openai.api_key = os.getenv("OPENAI_API_KEY")
           def recode_file(file_path, prompt):
               with open(file_path, 'r') as file:
                   content = file.read()
